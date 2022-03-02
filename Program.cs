@@ -24,8 +24,13 @@ namespace Quest
                     Length = 42
                 };
 
+                Hat newHat = new Hat
+                {
+                    ShininessLevel = 4
+                };
+
                 Console.Write("Please Enter Your Name: ");
-                Adventurer theAdventurer = new Adventurer(Console.ReadLine(), newRobe);
+                Adventurer theAdventurer = new Adventurer(Console.ReadLine(), newRobe, newHat);
 
                 string description = theAdventurer.GetDescription();
                 Console.WriteLine(description);
