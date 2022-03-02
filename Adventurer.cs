@@ -25,7 +25,7 @@ namespace Quest
 
         public string GetDescription()
         {
-            return $"{Name} is wearing a {ColorfulRobe} robe.";
+            return $"{Name} is wearing a robe with the colors {String.Join(", ", ColorfulRobe.Color)}";
         }
 
 

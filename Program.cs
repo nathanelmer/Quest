@@ -18,8 +18,18 @@ namespace Quest
                 //   the text of the challenge
                 //   a correct answer
                 //   a number of awesome points to gain or lose depending on the success of the challenge
+                Robe newRobe = new Robe
+                {
+                    Color = new List<string> { "red", "blue" },
+                    Length = 42
+                };
+
                 Console.Write("Please Enter Your Name: ");
-                Adventurer theAdventurer = new Adventurer(Console.ReadLine());
+                Adventurer theAdventurer = new Adventurer(Console.ReadLine(), newRobe);
+
+                string description = theAdventurer.GetDescription();
+                Console.WriteLine(description);
+
                 Challenge twoPlusTwo = new Challenge("2 + 2?", 4, 10);
                 Challenge theAnswer = new Challenge(
                     "What's the answer to life, the universe and everything?", 42, 25);
